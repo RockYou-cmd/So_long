@@ -6,7 +6,7 @@
 /*   By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:54:00 by ael-korc          #+#    #+#             */
-/*   Updated: 2022/03/13 13:14:26 by ael-korc         ###   ########.fr       */
+/*   Updated: 2022/03/13 20:27:19 by ael-korc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ typedef struct s_data {
 	t_map			map;
 }				t_data;
 
-void	game_start(t_data *data);
+void	start_game(t_data *data);
 void	game_window(t_data *data);
 void	end_game(char *error_message, t_data *data);
 void	read_map(char *file, t_data *data);

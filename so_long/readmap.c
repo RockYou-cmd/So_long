@@ -6,7 +6,7 @@
 /*   By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:40:40 by ael-korc          #+#    #+#             */
-/*   Updated: 2022/03/13 11:39:52 by ael-korc         ###   ########.fr       */
+/*   Updated: 2022/03/13 20:24:58 by ael-korc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	checkmap(char *line, int cols)
 
 	len = ft_strlen(line);
 	if (ft_strchr(line, '\n'))
-		len -= 1;
+		len = len - 1;
 	if (len != cols)
 		return (0);
 	else
@@ -40,14 +40,14 @@ void	file_ext(char *file, t_data *data)
 
 int	fillmap(t_data *data, char *line)
 {
-	char	**new_map;
-	size_t	i;
+	char			**new_map;
+	unsigned long	i;
 
 	i = 0;
 	data->map.rows = data->map.rows + 1;
 	new_map = ft_calloc(sizeof(char *), (data->map.rows + 1));
 	if (!new_map)
-		end_game("MALLOC ERROR :(", data);
+		end_game("MALLOC ERROR", data);
 	while (data->map.array[i])
 	{
 		new_map[i] = data->map.array[i];
@@ -71,7 +71,7 @@ void	read_map(char *file, t_data *data)
 		end_game("Couldn't open map file.", data);
 	line = get_next_line(fd);
 	if (!line)
-		end_game("Failed to read from map file.", data);
+		end_game("Failed to read map", data);
 	data->map.cols = ft_strlen(line) - 1;
 	data->map.rows = 0;
 	data->map.array[0] = NULL;

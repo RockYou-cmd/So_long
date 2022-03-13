@@ -6,7 +6,7 @@
 #    By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/13 14:03:17 by ael-korc          #+#    #+#              #
-#    Updated: 2022/03/13 14:03:18 by ael-korc         ###   ########.fr        #
+#    Updated: 2022/03/13 20:32:08 by ael-korc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRCS = main.c \
 	gnl/get_next_line_utils.c \
 	end_game.c \
 	game_start.c \
-	parse_map.c \
+	check_map.c \
 	images.c \
 	update_game.c \
 	move_handler.c \

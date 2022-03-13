@@ -6,13 +6,13 @@
 /*   By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 15:59:21 by ael-korc          #+#    #+#             */
-/*   Updated: 2022/03/12 20:33:25 by ael-korc         ###   ########.fr       */
+/*   Updated: 2022/03/13 20:26:01 by ael-korc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	check_render(t_data *data, int r, int c)
+void	update_window(t_data *data, int r, int c)
 {
 	if (data->map.array[r][c] == '1')
 		mlx_put_image_to_window(data->mlx, data->win, data->walls,
@@ -54,7 +54,7 @@ int	update(t_data *data)
 		c = 0;
 		while (c < data->map.cols)
 		{
-			check_render(data, r, c);
+			update_window(data, r, c);
 			c++;
 		}
 		r++;

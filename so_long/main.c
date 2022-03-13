@@ -6,7 +6,7 @@
 /*   By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 22:35:51 by ael-korc          #+#    #+#             */
-/*   Updated: 2022/03/13 14:15:43 by ael-korc         ###   ########.fr       */
+/*   Updated: 2022/03/13 20:28:52 by ael-korc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int argc, char **av)
 {
 	t_data	data;
 
-	game_start(&data);
+	start_game(&data);
 	if (argc != 2)
 		end_game("WRONG MAP", &data);
 	read_map(av[1], &data);

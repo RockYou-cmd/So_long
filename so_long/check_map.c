@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_map.c                                        :+:      :+:    :+:   */
+/*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:40:44 by ael-korc          #+#    #+#             */
-/*   Updated: 2022/03/13 11:39:40 by ael-korc         ###   ########.fr       */
+/*   Updated: 2022/03/13 20:24:07 by ael-korc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	charcheck(t_data *data, int r, int c)
 	char	ch;
 
 	ch = data->map.array[r][c];
-	if (ch != '1' && ch != '0' && ch != 'X'
+	if (ch != '1' && ch != '0'
 		&& ch != 'E' && ch != 'P' && ch != 'C'
 		&& ch != '\n')
 		return (0);
@@ -92,5 +92,6 @@ void	check_valid(t_data *data)
 	}
 	if (data->exit_count < 1 || data->collectable.count < 1
 		|| data->player_count != 1)
-		end_game("FAILED TO START THE GAME! (not enough/less elements)", data);
+		end_game("FAILED TO START THE GAME! (you missesd some elements in map)",
+			data);
 }

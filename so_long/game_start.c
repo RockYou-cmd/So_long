@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_start.c                                       :+:      :+:    :+:   */
+/*   start_game.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-korc <ael-korc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 18:39:26 by ael-korc          #+#    #+#             */
-/*   Updated: 2022/03/13 11:13:04 by ael-korc         ###   ########.fr       */
+/*   Updated: 2022/03/13 20:29:07 by ael-korc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	image_init(t_data *data)
 	data->win = NULL;
 }
 
-void	game_start(t_data *data)
+void	start_game(t_data *data)
 {	
 	data->map.array = malloc(sizeof(char *));
 	if (!data->map.array)
